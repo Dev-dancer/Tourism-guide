@@ -100,3 +100,6 @@ li:hover {
 }
 
 /* navbar end  */
+html {
+    zoom: 80%;
+}

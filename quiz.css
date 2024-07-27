@@ -154,3 +154,7 @@ li:hover {
 #quizinstructions h2 {
     padding: 20px;
 }
+
+html {
+    zoom: 80%;
+}

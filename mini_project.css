@@ -525,3 +525,7 @@ video {
         opacity: 1;
     }
 }
+
+html {
+    zoom: 80%;
+}
