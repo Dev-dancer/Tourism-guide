@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+    <div class="navbar">
+    
+        <a href="mini_project.html">
+            <h1> SEAG</h1>
+        </a>
+        <ul class="links">
+            <li><a href="mini_project.html">Home</a></li>
+            <li><a href="map.html">Map view</a></li>
+            <li><a href="contact.html">Feedback</a></li>
+            <li><a href="ifram.html">Sign in/Register</a></li>
+        </ul>
+    
+    </div>
+
+
+
+    <div class="quizcontainer">
+        <div class="quizheader">
+            <h2>Take a quiz</h2>
+        </div>
+
+        <div id="resultdiv"></div>
+
+
+        <div class="quizcontent">
+            <button id="startquiz" onclick="startquiz()" >Start quiz</button>
+                <div class="question" >
+                    <p id="questions">1. question 1</p>
+                </div>
+                <div id="quizinstructions">
+                    <h2>INSTRUCTIONS:</h2>
+                    <p>
+                        1. The quiz would have 5 questions.
+                        <br><br>
+                        2. You can only select an answer once then the options would be disable.
+                        <br><br>
+                        3.You cant come back to a question which has been visited once.
+                        <br><br>
+                        4. Your score will be displayed at the end.
+                    </p>
+                </div>
+                    <div class="answers" id="answers">
+                        <button id="1" class="ans" value="0">answer 1</button>
+                        <button id="2" class="ans" value="1">answer 2</button>
+                        <button id="3" class="ans" value="2">answer 3</button>
+                        <button id="4" class="ans" value="3">answer 4</button>
+                
+            </div>
+            <button id="nextquestion" class="anss" onclick="nextquestion()">Next</button>
+        </div>
+    </div>
+        <script src="quiz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    color: rgb(221, 221, 221);
+}
+
+body{
+    background-color: rgb(34, 32, 32);
+    /* position: relative; */
+}
+
+/* navbar start  */
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(28, 43, 43);
+    height: 10vh;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0px 10px 10px black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    font-size: 1.5rem;
+}
+
+.navbar h1 {
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+
+}
+
+.navbar h1:hover {
+    color: black;
+
+}
+
+.links {
+    list-style: none;
+}
+
+.links li {
+    display: inline;
+    padding-top: 37px;
+    padding-bottom: 33px;
+    transition: all 0.5s;
+}
+
+li:hover {
+    background-color: gray;
+}
+
+
+
+/* navbar end */
+
+.quizcontainer{
+    background-color: rgb(28, 43, 43);
+    height:60vh;
+    width: 100vh;
+    transform: translate(50%,30%);
+    border-radius: 10px;
+    border: 0.5px grey solid;
+    position: relative;
+}
+
+.quizheader{
+    /* background: linear-gradient(rgb(46, 46, 46),rgb(69, 68, 68)); */
+    border-bottom: grey 0.5px solid;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 30px;
+    
+}
+
+.question{
+    padding: 20px;
+    font-size: 30px;
+}
+
+.answers{
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;     */
+}
+
+/* .quizcontent{
+    position: relative;
+} */
+
+
+#startquiz,#nextquestion{
+    /* transform: translate(50%,50%); */
+    position: absolute;
+    top: 85%;
+    left: 2.2%;
+    
+    
+}
+
+.ans,.anss, #startquiz{
+    /* width: 80vb; */
+    padding: 20px;
+    margin: 5px;
+    background-color: rgb(28, 43, 43);
+    border: 1px grey solid;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 20px;
+    transition: all 0.2s linear;
+}
+
+.ans:hover:not([disabled]), #startquiz:hover, .anss:hover{
+    cursor: pointer;
+    background-color: rgb(78, 78, 78);
+}
+
+#quizinstructions p{
+    font-size: 22px;
+    padding: 20px;
+}
+
+#quizinstructions h2{
+    padding: 20px;
+}

@@ -1,0 +1,229 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 500;
+}
+body{
+    /* display: flex; */
+    /* justify-content: center; */
+    background-color: rgb(34, 32, 32);
+    overflow-x: hidden;
+}
+
+/* navbar start  */
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(28, 43, 43);
+    height: 10vh;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0px 10px 10px black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    font-size: 1.5rem;
+}
+
+.navbar h1 {
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+
+}
+
+.navbar h1:hover {
+    color: black;
+
+}
+
+.links {
+    list-style: none;
+}
+
+.links li {
+    display: inline;
+    padding-top: 37px;
+    padding-bottom: 33px;
+    transition: all 0.5s;
+}
+
+li:hover {
+    background-color: gray;
+}
+
+
+
+/* navbar end */
+
+.touristcardscontainer {
+    max-width: 1890px;
+    justify-content: center;
+    outline: 3px white solid;
+    outline-offset: 5px;
+    margin-left: 15px;
+    /* width: 95%; */
+    /* border: 2px black solid; */
+    transition: all 0.3s ease-in-out;
+    /* position: absolute; */
+    
+
+}
+
+.touristcardscontainer:hover {
+    outline-offset: 10px;
+
+}
+
+.slider .imglist {
+    display: grid;
+    font-size: 0;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* .slider .imglist::-webkit-scrollbar{
+    display: none;
+}  */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.slider .imglist .imgitem {
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.slider{
+    position: absolute;
+    top: 15vh; 
+    width:100%;
+    /* left: 50%;  */
+}
+/* i {
+    font-size: 44px;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    opacity: 0.85;
+    color: black;
+} */
+
+/* #rightarrow {
+    left: 95%;
+} */
+
+.imgitem {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* .imgitem:hover {
+    transform: scale(1.05);
+} */
+
+
+
+.overlaycontainer {
+    position: relative;
+}
+
+.imgitem {
+    display: block;
+}
+
+.overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all .5s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlaycontainer:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* transform: translate(-50%,-50%); */
+    /* text-align: center; */
+}
+
+.text p {
+    font-size: 20px;
+}
+
+
+.pin button {
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    /* position: absolute; */
+    /* left: 0.7em; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    background-color: #61dbbce8;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 2em;
+    font-size: 1.2em;
+    width: 20vh;
+}
+
+.pin:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+
+ 
+
+.container {
+    display: flex;
+    padding: 20px;
+    margin-right: 20px;
+    /* flex-direction: column; */
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 250px;
+    /* padding: 200px; */
+    /* top: 50%; */
+    /* position: relative; */
+    /* transform: translate(0%,70vh); */
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+}
+

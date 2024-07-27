@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+
+<body>
+
+    <div class="bgrd-text">
+        <p
+            style="font-weight: 600; font-size: xxx-large;  letter-spacing: 1px; color: rgb(255, 255, 255); text-shadow: 5px 5px 7px  black;">
+            SIGN UP</p>
+        <table class="frm">
+            <form id="registrationForm" action="#" method="GET">
+                <tr>
+                    <td>Name:</td>
+                    <td><input name="Name" class="inpbox" type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input name="Age" class="inpbox" type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Date of birth:</td>
+                    <td><input type="date" style="background-color:#ffffff40;border-style: none;
+                    width:222px;text-align: center; color:white" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td style="text-align: center;">
+                        Male <input type="radio" name="Gender" required>
+                        Female <input type="radio" name="Gender" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone number:</td>
+                    <td><input name="Phone number" class="inpbox" type="tel" required></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td><input name="Country" class="inpbox" type="text" required></td>
+                </tr>
+                <tr>
+                    <td>State:</td>
+                    <td><input name="State" class="inpbox" type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea name="Address" class="inpbox" cols="22" rows="5" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Pincode:</td>
+                    <td><input name="Pincode" class="inpbox" type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Select plan:</td>
+                    <td>
+                        <select name="Plan"
+                            style="background-color:#ffffff40;border-style: none; width:223px; text-align: center; color:rgb(180, 180, 180)"
+                            required>
+                            <option value="1">1 month</option>
+                            <option value="2">6 months</option>
+                            <option value="3">12 months</option>
+                            <option value="4">24 months</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><input name="Username" class="inpbox" type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input name="Password" class="inpbox" type="password" required></td>
+                </tr>
+            </form>
+        </table>
+        <br>
+        <p style="font-size: medium; color: rgb(255, 255, 255);">
+            I agree to all the terms and conditions* :
+            <input type="checkbox" style="width: 50px;" required>
+        </p>
+        <button id="submitBtn" class="submit">SUBMIT</button>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var nameRegex = /^[a-zA-Z\s]+$/;
+            var ageRegex = /^\d+$/;
+            var phoneRegex = /^\d{10}$/;
+            var pincodeRegex = /^\d{6}$/;
+            var usernameRegex = /^[a-zA-Z0-9_]+$/;
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+            function validateField(field, regex) {
+                return regex.test(field.value);
+            }
+
+            var inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="tel"], input[type="password"]');
+            var isValid = true; 
+            var errorMessage = ''; 
+            var isEmpty = false; 
+
+            inputs.forEach(function (input) {
+                var fieldName = input.getAttribute('name');
+                var fieldValue = input.value.trim();
+                var valid = true;
+
+                if (fieldValue === '') {
+                    isEmpty = true;
+                    valid = false;
+                } else {
+                    switch (fieldName) {
+                        case 'Name':
+                            valid = validateField(input, nameRegex);
+                            if (!valid) {
+                                errorMessage += 'Invalid name format.\n';
+                            }
+                            break;
+                        case 'Age':
+                            valid = validateField(input, ageRegex);
+                            if (!valid) {
+                                errorMessage += 'Age must be a number.\n';
+                            }
+                            break;
+                        case 'Phone number':
+                            valid = validateField(input, phoneRegex);
+                            if (!valid) {
+                                errorMessage += 'Invalid phone number format.\n';
+                            }
+                            break;
+                        case 'Pincode':
+                            valid = validateField(input, pincodeRegex);
+                            if (!valid) {
+                                errorMessage += 'Invalid pincode format.\n';
+                            }
+                            break;
+                        case 'Username':
+                            valid = validateField(input, usernameRegex);
+                            if (!valid) {
+                                errorMessage += 'Username must contain only letters, numbers, and underscores.\n';
+                            }
+                            break;
+                        case 'Password':
+                            valid = validateField(input, passwordRegex);
+                            if (!valid) {
+                                errorMessage += 'Password must be 6-20 characters long and contain at least one digit, one lowercase letter, and one uppercase letter.\n';
+                            }
+                            break;
+                    }
+                }
+                if (!valid) {
+                    input.style.border = '1px solid red';
+                    isValid = false;
+                } else {
+                    input.style.border = '';
+                }
+            });
+
+            if (isEmpty) {
+                errorMessage += 'Please fill in all the fields.\n';
+                isValid = false;
+            }
+            var termsCheckbox = document.querySelector('input[type="checkbox"]');
+            if (!termsCheckbox.checked) {
+                isValid = false;
+                errorMessage += 'Please agree to the terms and conditions.\n';
+            }
+            if (!isValid) {
+                alert(errorMessage);
+                return;
+            }
+            alert('Registration successful!');
+            document.getElementById('registrationForm').submit();
+        });
+    </script>
+
+</body>
+
+</html>
