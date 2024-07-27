@@ -1,13 +1,27 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
     color: white;
     font-weight: 500;
 }
-body{
-        background-color: rgb(34, 32, 32);
-            overflow: hidden;
+
+body {
+    background-color: rgb(34, 32, 32);
+    overflow: hidden;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    10% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
 }
 
 .navbar {
@@ -58,7 +72,7 @@ body{
 
 /* nav end  */
 
-.map{
+.map {
     display: flex;
     width: 100%;
     max-width: 1100px;
@@ -72,21 +86,21 @@ body{
 }
 
 
-img{
+img {
     width: 100%;
     /* object-fit: contain; */
 
 }
 
-.pin{
+.pin {
     /* background: rgb(255, 255, 255); */
     position: absolute;
     width: 0.5em;
     height: 0.5em;
-    border-radius:40% ;
+    border-radius: 40%;
 }
 
-.pin::before{
+.pin::before {
     content: '';
     background: rgb(0, 0, 0);
     position: absolute;
@@ -98,13 +112,13 @@ img{
     border-radius: 100%;
 }
 
-.pin button{
+.pin button {
     cursor: pointer;
     color: black;
     font-weight: 600;
-    display:inline-block ;
+    display: inline-block;
     text-decoration: none;
-    white-space:nowrap;
+    white-space: nowrap;
     position: absolute;
     left: 0.7em;
     top: 50%;
@@ -116,62 +130,72 @@ img{
     font-size: 0.9em;
 }
 
-.pin:hover{
+.pin:hover {
     opacity: 0.7;
     transition: all 0.3s ease-in-out;
 }
 
-.Singapore{
+.Singapore {
     top: 67%;
-    left:23% ;
+    left: 23%;
 }
-.Timor{
+
+.Timor {
     top: 91%;
-    left:58% ;
+    left: 58%;
 }
-.Myanmar{
+
+.Myanmar {
     top: 17%;
-    left:12%;
+    left: 12%;
 }
-.Laos{
+
+.Laos {
     top: 26%;
-    left:22% ;
+    left: 22%;
 }
-.Vietnam{
+
+.Vietnam {
     top: 22%;
-    left:26%;
+    left: 26%;
 }
-.Thailand{
+
+.Thailand {
     top: 35%;
-    left:20% ;
+    left: 20%;
 }
-.Cambodia{
+
+.Cambodia {
     top: 42%;
-    left:26% ;
+    left: 26%;
 }
-.Malaysia{
+
+.Malaysia {
     top: 62%;
-    left:20.5% ;
+    left: 20.5%;
 }
-.Brunei{
+
+.Brunei {
     top: 61%;
-    left:40% ;
+    left: 40%;
 }
-.Indonesia{
+
+.Indonesia {
     top: 73%;
-    left:39% ;
+    left: 39%;
 }
-.Phillipines{
+
+.Phillipines {
     top: 33%;
-    left:50.5% ;
+    left: 50.5%;
 }
 
-.container{
+.container {
     display: flex;
-    
+
 }
 
- #rightinfo{
+#rightinfo {
     display: flex;
     top: 93px;
     height: 90vh;
@@ -182,9 +206,9 @@ img{
     padding-top: 10px;
     color: white;
     /* border: white 10px solid; */
-} 
+}
 
-#rightinfo::-webkit-scrollbar{
+#rightinfo::-webkit-scrollbar {
     display: none;
 }
 
@@ -194,45 +218,45 @@ img{
     background-size: contain;
 } */
 
-.flag{
+.flag {
     height: 70px;
     width: 120px;
 }
 
-.scale{
+.scale {
     height: 300px;
-        width: 300px;
+    width: 300px;
 }
 
-.smallermap{
+.smallermap {
     /* max-height: 300px;
     max-width: 300px; */
     height: 300px;
     width: 300px;
     cursor: pointer;
-    
+
     /* outline: 2px white solid; */
     /* outline-offset: 5px; */
     /* border: 2px rgba(0, 0, 0, 0.644) solid; */
-} 
+}
 
-.smallermap:hover{
+.smallermap:hover {
     opacity: 0.9;
     transition: all 0.3s ease-in-out;
 }
 
-.mapinfo{
+.mapinfo {
     /* position: static; */
- 
+
 }
 
-.mapinfo h2{
+.mapinfo h2 {
     margin: 8px 0px 3px 0px;
 }
 
- .special{
+.special {
     cursor: pointer;
-    transform: scale(2.3) translate(-40%,15%);
+    transform: scale(2.3) translate(-40%, 15%);
     transition: all 0.5s;
     position: absolute;
     /* top: 40%;
@@ -242,7 +266,7 @@ img{
 
 
 
-.notspecial{
+.notspecial {
     cursor: pointer;
     transform: scale(1);
     transition: all 0.5s;
@@ -250,7 +274,7 @@ img{
     /* z-index: 111; */
 }
 
-.notspecial:hover{
+.notspecial:hover {
     opacity: 0.8;
 }
 
@@ -262,13 +286,13 @@ img{
  */
 
 
-.infoheader{
+.infoheader {
     padding-bottom: 20px;
-    
+
 }
 
-    
-.infoheader p{
+
+.infoheader p {
     /* display: flex; */
     /* justify-content: center; */
     /* background-color: rgb(0, 0, 139); */
@@ -280,39 +304,42 @@ img{
     /* height: 15vh; */
     color: transparent;
     /* outline: 1px white solid; */
-    
+
     font-size: 100px;
     font-weight: 700;
     letter-spacing: 3px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.infoheader h1{
+.infoheader h1 {
     color: transparent;
-    
+
 }
+
 /* h2,h1{
     color: transparent;
         -webkit-text-stroke: 0.7px white;
 } */
 
-.jhanjhat{
+.jhanjhat {
     display: flex;
     gap: 20px;
     padding-bottom: 15px;
 }
 
-.viewmore{
+.viewmore {
     margin: 20px 0px 0px 0px;
-    
+
 }
 
-ol{
-    padding-left:20px ;
-    padding-bottom:20px ;
+ol {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-.mapinfo p,ol li, ol p{
+.mapinfo p,
+ol li,
+ol p {
     font-size: 20px;
 }
 
@@ -320,7 +347,7 @@ ol{
     /* padding: 20px; */
 
     /* text-align: center; */
-    margin:10px 0px 0px 15px ;
+    margin: 10px 0px 0px 15px;
     transition: all 0.3s ease-in-out;
     /* margin-bottom: 20vh; */
 
@@ -354,7 +381,25 @@ ol{
     background-color: rgba(137, 130, 130, 0.256);
 }
 
-.tour{
+.tour {
     display: flex;
-    
+
+}
+
+/* 
+video{
+    height: 400px;
+    width: 750px;
+    margin-bottom: 50px;
+} */
+video {
+    object-fit: fill;
+    height: 50vh;
+    width: 86vh;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#vid {
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black, 0px 80px 50px -30px rgba(0, 0, 0, 0.814);
 }

@@ -1,15 +1,30 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-weight: 500;
 }
-body{
+
+body {
     overflow: hidden;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
+@keyframes fadeInAnimation {
+    10% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+}
+
 .bg {
     /* filter: blur(3px); */
-    height:100vh;
+    height: 100vh;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,6 +33,7 @@ body{
     /* z-index: inherit; */
     z-index: -100;
 }
+
 /* .bgtext {
     position: absolute;
     top: 50%;

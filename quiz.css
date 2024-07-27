@@ -1,13 +1,26 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
     color: rgb(221, 221, 221);
 }
 
-body{
+body {
     background-color: rgb(34, 32, 32);
     /* position: relative; */
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    10% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
 }
 
 /* navbar start  */
@@ -64,31 +77,31 @@ li:hover {
 
 /* navbar end */
 
-.quizcontainer{
+.quizcontainer {
     background-color: rgb(28, 43, 43);
-    height:60vh;
+    height: 60vh;
     width: 100vh;
-    transform: translate(50%,30%);
+    transform: translate(50%, 30%);
     border-radius: 10px;
     border: 0.5px grey solid;
     position: relative;
 }
 
-.quizheader{
+.quizheader {
     /* background: linear-gradient(rgb(46, 46, 46),rgb(69, 68, 68)); */
     border-bottom: grey 0.5px solid;
     padding: 20px;
     padding-bottom: 0px;
     font-size: 30px;
-    
+
 }
 
-.question{
+.question {
     padding: 20px;
     font-size: 30px;
 }
 
-.answers{
+.answers {
     padding: 20px;
     padding-top: 0px;
     margin-top: 20px;
@@ -102,16 +115,19 @@ li:hover {
 } */
 
 
-#startquiz,#nextquestion{
+#startquiz,
+#nextquestion {
     /* transform: translate(50%,50%); */
     position: absolute;
     top: 85%;
     left: 2.2%;
-    
-    
+
+
 }
 
-.ans,.anss, #startquiz{
+.ans,
+.anss,
+#startquiz {
     /* width: 80vb; */
     padding: 20px;
     margin: 5px;
@@ -123,16 +139,18 @@ li:hover {
     transition: all 0.2s linear;
 }
 
-.ans:hover:not([disabled]), #startquiz:hover, .anss:hover{
+.ans:hover:not([disabled]),
+#startquiz:hover,
+.anss:hover {
     cursor: pointer;
     background-color: rgb(78, 78, 78);
 }
 
-#quizinstructions p{
+#quizinstructions p {
     font-size: 22px;
     padding: 20px;
 }
 
-#quizinstructions h2{
+#quizinstructions h2 {
     padding: 20px;
 }

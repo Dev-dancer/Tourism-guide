@@ -1,96 +1,97 @@
-*{
+* {
     font-size: large;
     font-family: sans-serif;
     text-shadow: 2px 2px 5px black;
-    
+
 }
 
-.backgroundss{
+.backgroundss {
 
-        height: 820px;
-        width:100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-  
-    td{
-        text-align: left;
-        padding-left:2rem;
-        padding-right:2rem;
-        color: rgb(255, 255, 255);
-        
-    }
+    height: 820px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    .bgrd-text {
-        backdrop-filter: blur(6px);
-        
-        background-color: rgba(248, 248, 248, 0.1);
-        
-        border-radius: 15px;
-        color: rgb(255, 255, 255);
-        position: absolute;
-        top: 56vh;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 30rem;
-        padding: 20px;
-        text-align: center;
-    }
+td {
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: rgb(255, 255, 255);
 
-    table{
-        margin:auto;
-        color: #000000;
-  
-    }
-    
-    .inpbox{
-        background-color: #ffffff40;
-        border-style: none;
-        color: white;
-        
-    }
-    input{
-        border-radius: 5px;
+}
 
-    }
-    
-   
-    .submit{
-        width:50%;
-        transition:all  0.3s ease-in-out;
-        padding: 14px 28px;
-        background-color: transparent;
-        border-color: rgb(255, 255, 255);
-        border-style: solid;
-        border-width: 3px;
-        color: rgb(255, 255, 255);
-        
-    }
+.bgrd-text {
+    backdrop-filter: blur(6px);
 
-        
-    .submit:hover{
-        text-shadow: none;
-        border-color: transparent;
-            border-style: solid;
-            border-width: 3px;
-        width: 50%;
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-        background-color: #0ebf7e;
-        /* padding: 14px 28px; */
-        font-size: large;
-        cursor: pointer;
-        text-align: center;
-        transform: scale(1.05);
-        outline: solid white ;
-        outline-offset: 3px;
-            }
+    background-color: rgba(248, 248, 248, 0.1);
 
-    
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 56vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    color: #000000;
+
+}
+
+.inpbox {
+    background-color: #ffffff40;
+    border-style: none;
+    color: white;
+
+}
+
+input {
+    border-radius: 5px;
+
+}
 
 
-    /* .submit:hover{
+.submit {
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+    padding: 14px 28px;
+    background-color: transparent;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 3px;
+    color: rgb(255, 255, 255);
+
+}
+
+
+.submit:hover {
+    text-shadow: none;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    width: 50%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: #0ebf7e;
+    /* padding: 14px 28px; */
+    font-size: large;
+    cursor: pointer;
+    text-align: center;
+    transform: scale(1.05);
+    outline: solid white;
+    outline-offset: 3px;
+}
+
+
+
+
+/* .submit:hover{
         cursor: pointer;
          transform: translate(1%,1%);
         box-shadow:  1px 1px 2px white, -1px -1px 2px white ;
@@ -100,4 +101,3 @@
             -0.5px -0.5px 1px ;
             color: white;
     } */
-
